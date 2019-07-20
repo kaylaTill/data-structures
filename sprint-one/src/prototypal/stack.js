@@ -1,30 +1,29 @@
 var Stack = function() {
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-    var stackInstance = Object.create(Stack.methods);
+    var stackInstance = Object.create(Stack.prototype);
     stackInstance.storage = {};
     stackInstance.index = 0;
     return stackInstance;
-  };
 };
 
-Stack.methods = {}
+var stackMethods = {}
 
-methods.push = function (value) {
+stackMethods.push = function (value) {
   this.storage[this.index] = value;
   this.index++;
 };
-methods.pop = function () {
+stackMethods.pop = function () {
   this.index--;
   return this.storage[this.index];
   delete this.storage[this.index];
-}
+};
 
-methods.size = function () {
+stackMethods.size = function () {
   if (this.index < 0) {
     return 0;
   }
   return this.index;
-}
+};
 
 
 

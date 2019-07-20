@@ -1,7 +1,6 @@
 var Stack = function(){
   this.storage = {};
   this.index = 0
-
 };
 
 

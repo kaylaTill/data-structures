@@ -37,6 +37,5 @@ var test = Stack();
 test.push("kay");
 test.push("tillman");
 test.push('me');
-debugger
 test.pop();
 test.pop();
