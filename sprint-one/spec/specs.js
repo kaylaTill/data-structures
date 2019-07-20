@@ -102,6 +102,7 @@ define([
       }
     });
 
+    
     describe('queue shared behavior', function() {
 
       verifyClass(instantiator).followsPattern(variant, {}, prototypeOfInstances);
