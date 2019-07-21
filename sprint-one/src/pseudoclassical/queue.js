@@ -12,7 +12,7 @@ var Queue = function() {
 
 
 Queue.prototype.enqueue = function (value) {
-  this.storage[this.index] = value;
+  this.storage[this.indexCounter] = value;
   this.indexCounter++;
 };
 

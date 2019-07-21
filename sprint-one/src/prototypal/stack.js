@@ -1,6 +1,8 @@
+
 var Stack = function() {
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-    var stackInstance = Object.create(Stack.prototype);
+
+    var stackInstance = Object.create(stackMethods);
     stackInstance.storage = {};
     stackInstance.index = 0;
     return stackInstance;
@@ -26,5 +28,7 @@ stackMethods.size = function () {
 };
 
 
+var stack = Stack();
+stack.push('val');
 
 

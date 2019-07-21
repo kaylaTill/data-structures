@@ -18,7 +18,7 @@ var extend = function (to, from) {
 var queueMethods = {};
 
 queueMethods.enqueue = function (value) {
-  this.storage[this.index] = value;
+  this.storage[this.indexCounter] = value;
   this.indexCounter++;
 };
 
@@ -36,6 +36,14 @@ queueMethods.size = function () {
   return this.indexCounter - this.dequeueNext
 };
 
-var newQueue = Queue();
-newQueue.enqueue
+var newQueue = new Queue();
+newQueue.enqueue('val1');
+newQueue.enqueue('val2');
+newQueue.enqueue('val3');
+newQueue.enqueue('val4');
+newQueue.dequeue();
+newQueue.dequeue();
+
+
+
 
